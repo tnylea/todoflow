@@ -1,0 +1,22 @@
+TodoFlow
+
+This app is built using Laravel, Livewire, AlpineJS, and TailwindCSs.
+
+Remember, when we want to refer to variables using javascript in Alpine JS we must include `x-on:`, for instance `x-on:checked="checked"`, instead of just `:checked="checked"`. otherwise PHP will try to render this as a PHP variable. Very important.
+
+This is a simple todo application built with Laravel and the Livewire starter kit (https://github.com/laravel/livewire-starter-kit) (non-Volt components). This project provides users with a seamless task-tracking experience, allowing them to add, edit, delete, and organize tasks with ease. The core functionality revolves around an interactive todo list displayed on the homepage, where users can quickly add tasks without needing an account. For guest users, tasks are stored in LocalStorage, ensuring that their data persists even if they close and reopen the browser. However, once a user registers or logs in, their tasks are migrated from LocalStorage to the database, enabling them to access their tasks from any device.
+
+In addition to basic task management, users can apply tags to categorize tasks, such as “Urgent” or “Backlog,” with customizable colors for easy identification. Each task also supports detailed notes, which can be accessed by clicking the task to open a drawer UI. This provides an intuitive way for users to store additional context or reminders. The Livewire Starter Kit handles user authentication, ensuring a smooth transition between guest and registered users. By leveraging Livewire’s real-time capabilities, updates to the todo list happen instantly without requiring page reloads. This starter kit is designed to be lightweight, flexible, and a great foundation for anyone looking to build a more advanced task or project management system.
+
+Here are some rules to follow:
+
+- Always use the latest technologies including Livewire V3 and Tailwind CSS V4
+- Make sure that the code is clean and that the code is written well
+- Be sure to have a designers eye and make the UI look really nice.
+- When writing javascript be sure to use Alpine where it works nicely with the project
+- We are using Flux UI, so be sure to leverage those components. We only want to leverage the Free ones, (the pro components, like https://fluxui.dev/components/calendar, will have a message at the top of the page that says 'Flux Pro component')
+
+``` Prompt:
+
+Please add a todo list on the main homepage along with the application header and login/signup links. On the homepage the user can add, edit, delete tasks. I want to store the todo list items inside of local storage, so if the user closes the tab or the window and they re-open they'll see their list of tasks. I then want the user to be able to signup/register for an account, this is all provided in the starter kit, but what I want to happen is that if the user registers or signs up for an account instead of it storing the data via LocalSTorage, I want it to store to the database, this way if they login on other devices all of their tasks will be available. I want them to be able to add tasks, mark tasks as complete, edit tasks, and delete tasks. I also want to allow them to add tags to any of these items. Perhaps add a Tags table and each task can include that task. This means that they can add things like Urgent, or Backlog and they can apply a color to that task. The tags should be specific to the user and the user can only add on unique tag slug. But User A could have a tag called `urgent` and so could User B. This way they will eventually be able to see all tasks by tags.  Next, I want them to be able to add additional notes to each of the task, they can click the task and a drawer will open up where they can add some tasks, for now it will just be a textarea that stores the details for each task.
+```
