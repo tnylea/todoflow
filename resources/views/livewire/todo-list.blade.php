@@ -27,8 +27,8 @@
                         <div class="flex items-start gap-3 p-4 bg-zinc-50 dark:bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-700 group">
                             <div class="pt-1">
                                 <flux:checkbox 
-                                    wire:click="toggleComplete('{{ $task['id'] }}')" 
-                                    x-on:checked="{{ $task['completed'] ?? false }}"
+                                    wire:click="toggleComplete('{{ $task['id'] }}')"
+                                    :checked="$task['completed'] ?? false"
                                 />
                             </div>
                             
