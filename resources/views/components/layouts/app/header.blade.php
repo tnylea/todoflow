@@ -43,6 +43,7 @@
                 </flux:tooltip>
             </flux:navbar>
 
+            @auth
             <!-- Desktop User Menu -->
             <flux:dropdown position="top" align="end">
                 <flux:profile
@@ -86,6 +87,7 @@
                     </form>
                 </flux:menu>
             </flux:dropdown>
+            @endauth
         </flux:header>
 
         <!-- Mobile Menu -->
